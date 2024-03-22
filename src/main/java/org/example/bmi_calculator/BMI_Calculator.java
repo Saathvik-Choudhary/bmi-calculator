@@ -10,7 +10,7 @@ import java.io.IOException;
 public class BMI_Calculator extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(BMI_Calculator.class.getResource("BMI_frontend.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(BMI_Calculator.class.getResource("BMI_frontend_withdropdown.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("BMI Calculator by Saathvik");
         stage.setScene(scene);
