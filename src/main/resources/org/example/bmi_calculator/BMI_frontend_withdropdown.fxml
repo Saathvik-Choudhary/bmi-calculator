@@ -10,7 +10,7 @@
 
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bmi_calculator.BMIController">
    <children>
       <Pane focusTraversable="true" prefHeight="59.0" prefWidth="304.0">
          <children>
@@ -117,9 +117,9 @@
                   <Font name="Times New Roman" size="16.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="200.0" layoutY="61.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: white; -fx-border-color: black;" >
+            <ChoiceBox fx:id="HeightUnits" layoutX="200.0" layoutY="61.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: white; -fx-border-color: black;" >
                <items>
-                  <FXCollections fx:factory="observableArrayList">
+                  <FXCollections  fx:factory="observableArrayList">
                      <String fx:value="cm" />
                      <String fx:value="in" />
                   </FXCollections>
@@ -140,9 +140,9 @@
                   <Font name="Times New Roman" size="16.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="200.0" layoutY="44.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: white; -fx-border-color: black;" >
+            <ChoiceBox fx:id="WeightUnits" layoutX="200.0" layoutY="44.0" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: white; -fx-border-color: black;" >
                <items>
-                  <FXCollections fx:factory="observableArrayList">
+                  <FXCollections  fx:factory="observableArrayList" >
                      <String fx:value="kg" />
                      <String fx:value="g" />
                   </FXCollections>
@@ -150,7 +150,7 @@
             </ChoiceBox>
          </children>
       </Pane>
-      <Button fx:id="CalculateButton" depthTest="DISABLE" layoutX="20.0" layoutY="531.0" mnemonicParsing="false" style="-fx-background-color: #2C95ED;" text="Calculate" textFill="#f7f7f7">
+      <Button fx:id="CalculateButton" depthTest="DISABLE" layoutX="20.0" layoutY="531.0" mnemonicParsing="false" style="-fx-background-color: #2C95ED;" text="Calculate" textFill="#f7f7f7" onAction="#onCalculateButtonClick">
          <font>
             <Font size="15.0" />
          </font>
@@ -164,7 +164,7 @@
             </Label>
          </children>
       </Pane>
-      <TextField layoutX="219.0" layoutY="533.0" prefHeight="26.0" prefWidth="59.0" style="-fx-border-color: white;">
+      <TextField fx:id="Output" layoutX="219.0" layoutY="533.0" prefHeight="26.0" prefWidth="59.0" style="-fx-border-color: white;">
          <font>
             <Font name="Times New Roman" size="13.0" />
          </font>
