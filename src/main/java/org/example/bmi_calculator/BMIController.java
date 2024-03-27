@@ -34,7 +34,6 @@ public class BMIController {
             String wu = WeightUnits.getValue();
             String hu = HeightUnits.getValue();
 
-            System.out.println(wu);
             w = ob.adjustWeight(w, wu);
             h = ob.adjustHeight(h, hu);
 
@@ -56,7 +55,7 @@ public class BMIController {
     }
 
 
-    private final float adjustWeight(float w,String wu)
+    public final float adjustWeight(float w,String wu)
     {
         if(Objects.equals(wu, "g"))
         {
@@ -66,7 +65,7 @@ public class BMIController {
 
     }
 
-    private final float adjustHeight(float h,String hu)
+    public final float adjustHeight(float h,String hu)
     {
         if(Objects.equals(hu, "in"))
         {
@@ -76,7 +75,7 @@ public class BMIController {
     }
 
 
-    private final String CalculateingBMI(float h,float w)
+    public final String CalculateingBMI(float h,float w)
     {
         return(Float.toString((10000*w)/(h*h)));
     }
