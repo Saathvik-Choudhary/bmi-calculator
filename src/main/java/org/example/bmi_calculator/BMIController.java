@@ -26,7 +26,7 @@ public class BMIController {
     protected void onCalculateButtonClick() {
 
         try {
-            BMIController ob = new BMIController();
+            BMIController bmiController = new BMIController();
 
             float h = Float.parseFloat(this.getValue(HeightInput));
             float w = Float.parseFloat(this.getValue(WeightInput));
@@ -34,10 +34,10 @@ public class BMIController {
             String wu = WeightUnits.getValue();
             String hu = HeightUnits.getValue();
 
-            w = ob.adjustWeight(w, wu);
-            h = ob.adjustHeight(h, hu);
+            w = bmiController.adjustWeight(w, wu);
+            h = bmiController.adjustHeight(h, hu);
 
-            Output.setText(ob.CalculateingBMI(h, w));
+            Output.setText(CalculateingBMI(h, w));
         }
         catch (Exception e1)
         {
